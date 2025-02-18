@@ -189,10 +189,11 @@ Bubble: the box that expands below an expandable, containing a Nutshell Section
     const LOAD_WAIT_TIME = 6999; // 7 seconds
     const HEADER_TAGS = ['h1','h2','h3','h4','h5','h6'];
 
+    // kodebanget modified this from the original defaults!
     Nutshell.options = {
         startOnLoad: true, // Start Nutshell on load? (default: true)
-        lang: 'en', // Language (default: 'en', which is English)
-        dontEmbedHeadings: false, // If 'true', removes the "embed this as a nutshell" option on headings
+        lang: 'id', // Language (default: 'en', which is English)
+        dontEmbedHeadings: true, // If 'true', removes the "embed this as a nutshell" option on headings
     };
 
     // A semantic sugar function to override options
