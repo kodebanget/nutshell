@@ -1736,6 +1736,7 @@ Bubble: the box that expands below an expandable, containing a Nutshell Section
         position:absolute;
         width:100%;
         bottom:0;
+        left: 0;
         border: 0;
         background: none;
 
@@ -1753,20 +1754,6 @@ Bubble: the box that expands below an expandable, containing a Nutshell Section
     /* Misc styling for bubbles. I am a busybody. */
     .nutshell-bubble li{
         margin-bottom: 0.5em;
-    }
-    .nutshell-bubble code{
-        background: #ddd;
-        border-radius: 5px;
-        /*font-weight:100;*/
-        padding: 0 5px;
-    }
-    .nutshell-bubble blockquote{
-        /*background: #eee;*/
-        margin-left: 0px;
-        margin-right: 0px;
-        border-left: 0.5em solid #eee;
-        padding: 1px 1em 1px 1.5em;
-        margin-top: 0;
     }
 
     /***************************************************
@@ -1807,14 +1794,15 @@ Bubble: the box that expands below an expandable, containing a Nutshell Section
         position: absolute;
         margin: auto;
         top: 0; left: 0; right: 0; bottom: 0;
-        width: 600px;
+        width: calc(100vw - 30px);
+        max-width: 600px;
         height: 450px;
 
         /* Color & font */
         background: #fff;
         color: #000;
         border-radius: 30px;
-        font-size: 20px;
+        font-size: medium;
         line-height: 1.5em;
 
         /* Animate by slide up */
@@ -1849,10 +1837,10 @@ Bubble: the box that expands below an expandable, containing a Nutshell Section
     /* Can scroll inside! */
     #nutshell-embed-modal-overflow{
         overflow-x: visible;
-        overflow-y: scroll;
+        overflow-y: auto;
         padding: 15px 30px;
-        width: calc(100% - 60px);
-        height: calc(100% - 30px);
+        width: 100%;
+        height: 100%;
     }
 
     /* The "inputs" in the modal should look code-like */
@@ -1892,8 +1880,11 @@ Bubble: the box that expands below an expandable, containing a Nutshell Section
 
         /* Rounded corner */
         /*background: inherit;*/
-        background: #fff;
+        background: #fff5;
         padding: 0.7em;
+        border: 1px solid;
+        border-top: none;
+        border-right: none;
         border-radius: 0 0 0 1em;
 
     }
